@@ -1,0 +1,77 @@
+﻿@page "/"
+
+@code{
+    private List<Person> People;
+
+    public class Person
+    {
+        public int Id { get; set;}
+        public string Name { get; set;}
+
+    }
+
+    protected override void OnInitialized()
+    {
+        People = new List<Person>();
+        People.Add(new Person { Id=0, Name="Cindy" });
+        People.Add(new Person {Id=1, Name="Jeff"});
+    }
+
+}
+
+
+<PageTitle>Index</PageTitle>
+
+@using BlazerServerApp.Data
+@inject WeatherForecastService ForecastService
+@inject OpenWeatherService OpenWeatherService
+
+<h1>Bonjour!</h1>
+<h2>Aujourd'hui @DateTime.Now</h2>
+
+@if (data == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Personne</th>
+                <th>Location</th>
+                <th>Summary</th>
+                <th>Temp. (Celcius)</th>
+                <th>Time</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in data)
+            {
+                <tr>
+                    <td>@d.Name</td>
+                    <td>@d.Location</td>
+                    <td>@d.Summary</td>
+                    <td>@d.TemperatureC</td>
+                    <td>@d.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    //bcbbea02d17407d9ccf1a4e494743777
+    private WeatherForecast[]? forecasts;
+    private DataEntry[]? data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        //OpenWeatherService.Test();
+        OpenWeatherService.InitTheDataForThePeople();
+        data = await OpenWeatherService.GetData();
+
+    }
+}

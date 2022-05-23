@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9df53a73-9a73-4d10-88d2-f4fad8ef086a": {
+      "ProjectGuid": "9df53a73-9a73-4d10-88d2-f4fad8ef086a",
+      "DisplayName": "BlazerServerApp",
+      "ColorIndex": 0
+    },
+    "4e3ff8cd-77b3-47d9-a304-9ce9c0ef6c2c": {
+      "ProjectGuid": "4e3ff8cd-77b3-47d9-a304-9ce9c0ef6c2c",
+      "DisplayName": "BlazerServerApp",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

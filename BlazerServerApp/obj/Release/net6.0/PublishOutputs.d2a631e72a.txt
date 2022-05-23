@@ -1,0 +1,8 @@
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\BlazerServerApp.exe
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\BlazerServerApp.dll
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\BlazerServerApp.deps.json
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\BlazerServerApp.runtimeconfig.json
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\BlazerServerApp.pdb
+D:\Work\Kitbash3d\BlazerTest\Server\BlazerServerApp\BlazerServerApp\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll

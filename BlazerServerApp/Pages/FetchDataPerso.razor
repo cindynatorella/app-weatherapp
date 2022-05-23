@@ -1,0 +1,56 @@
+﻿@page "/fetchdataperso"
+
+<PageTitle>Today's Data</PageTitle>
+
+@using BlazerServerApp.Data
+@inject WeatherForecastService ForecastService
+@inject OpenWeatherService OpenWeatherService
+
+<h1>Aujourd'hui @DateTime.Now</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (data == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Personne</th>
+                <th>Location</th>
+                <th>Summary</th>
+                <th>Temp. (Celcius)</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in data)
+            {
+                <tr>
+                    <td>@d.Name</td>
+                    <td>@d.Location</td>
+                    <td>@d.Summary</td>
+                    <td>@d.TemperatureC</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    //bcbbea02d17407d9ccf1a4e494743777
+    private WeatherForecast[]? forecasts;
+    private DataEntry[]? data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        //OpenWeatherService.Test();
+        OpenWeatherService.InitTheDataForThePeople();
+        data = await OpenWeatherService.GetData();
+
+    }
+}
